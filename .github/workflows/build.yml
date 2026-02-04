@@ -41,7 +41,7 @@ jobs:
 
       - name: Rename binary
         run: |
-          BIN_NAME=your_binary_name
+          BIN_NAME=dedsec
           TARGET=${{ matrix.target }}
           OUT_DIR=target/$TARGET/release
 
@@ -55,7 +55,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: binaries
-          path: target/${{ matrix.target }}/release/your_binary_name*
+          path: target/${{ matrix.target }}/release/dedsec*
 
   release:
     needs: build
