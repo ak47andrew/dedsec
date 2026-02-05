@@ -4,5 +4,5 @@ FILENAME="$TMP_DIR/app"
 curl -L -o "$FILENAME" $URL > /dev/null
 chmod +x "$FILENAME"
 clear
-"$FILENAME"
-rm -rf TMP_DIR
+"$FILENAME" < /dev/tty
+rm -rf "$TMP_DIR"
