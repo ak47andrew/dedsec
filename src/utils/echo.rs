@@ -7,7 +7,7 @@ pub struct EchoUtil {
 
 impl UtilAbc for EchoUtil {
     fn get_name(&self) -> String {
-        "EchoUtil".to_string()
+        "LOOPBACK".to_string()
     }
 
     fn run(&self) {

@@ -39,7 +39,6 @@ pub static WARNING_LINES: [&str; 8] = [
     "Timing variance outside expected bounds.",
     "Unverified state transition encountered.",
 ];
-
 pub static ERROR_LINES: [&str; 7] = [
     "Operation stalled. Recovering context...",
     "Signal desynchronization occurred.",

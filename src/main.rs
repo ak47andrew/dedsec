@@ -45,7 +45,8 @@ fn main() {
         for (ind, util) in utils.iter().enumerate() {
             println!("{}) {}", ind + 1, util.get_name())
         }
-        print!(">>> ");
+        print!("{}) {}", utils.len() + 1, "Exit.".underline().bold());
+        print!("\n>>> ");
         io::stdout().flush().unwrap();
 
         let mut input = String::new();
@@ -60,9 +61,14 @@ fn main() {
             Ok(i) => index = i,
         }
 
-        if index == 0 || index - 1 >= utils.len() {
-            println!("{}", "Unknown command".red());
+        if index == 0 || index - 1 >= utils.len() + 1 {
+            println!("{}", "Unknown command".cyan().bold());
             continue;
+        }
+
+        if index - 1 == utils.len() {
+            println!("{}", "Cleaned up. See ya later!".red());
+            break;
         }
 
         utils[index - 1].run();
